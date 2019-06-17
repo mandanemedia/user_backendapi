@@ -1,17 +1,17 @@
 {
   "name": "user_backendapi",
   "version": "1.0.0",
-  "description": "JWT user management",
+  "description": "User Management Backend API",
   "main": "index.js",
   "scripts": {
     "start": "",
     "test": "nyc mocha --recursive test"
   },
-  "author": "Danial Javanmardi <danial.javanmardi@gmail.com>",
+  "author": "Danial Javanmardi <javanmardi.danial@gmail.com>",
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "https://mandanemedia@bitbucket.org/mandanemedia/fortunedb.git"
+    "url": "https://github.com/mandanemedia/user_backendapi.git"
   },
   "dependencies": {
     "assert": "^1.4.1",
