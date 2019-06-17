@@ -1,0 +1,33 @@
+{
+  "name": "user_backendapi",
+  "version": "1.0.0",
+  "description": "JWT user management",
+  "main": "index.js",
+  "scripts": {
+    "start": "",
+    "test": "nyc mocha --recursive test"
+  },
+  "author": "Danial Javanmardi <danial.javanmardi@gmail.com>",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://mandanemedia@bitbucket.org/mandanemedia/fortunedb.git"
+  },
+  "dependencies": {
+    "assert": "^1.4.1",
+    "express": "^4.16.0",
+    "fs": "0.0.2",
+    "mocha": "^4.1.0",
+    "node-fetch": "^2.2.0",
+    "nyc": "^11.4.1",
+    "ololog": "^1.1.112",
+    "path": "^0.12.7",
+    "pg": "7.4.3",
+    "request": "^2.83.0",
+    "should": "^13.2.3",
+    "sinon": "^6.3.4",
+    "uuid": "^3.1.0",
+    "winston": "^3.1.0",
+    "winston-daily-rotate-file": "^3.3.3"
+  }
+}
