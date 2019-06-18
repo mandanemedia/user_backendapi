@@ -13,10 +13,19 @@
     "type": "git",
     "url": "https://github.com/mandanemedia/user_backendapi.git"
   },
+  "devDependencies": {
+    "eslint": "^5.4.0",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-node": "^7.0.1",
+    "eslint-plugin-promise": "^4.0.0",
+    "eslint-plugin-standard": "^3.1.0"
+  },
   "dependencies": {
     "assert": "^1.4.1",
     "express": "^4.16.0",
     "fs": "0.0.2",
+    "jsonwebtoken": "^8.3.0",
     "mocha": "^4.1.0",
     "node-fetch": "^2.2.0",
     "nyc": "^11.4.1",
