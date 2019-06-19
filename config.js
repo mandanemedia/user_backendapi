@@ -2,8 +2,9 @@
 
 module.exports = {
     secret: 'cc_DanialJavanmardi_BackendAPI',
+    saltRounds : 10,
     DBPoolConnection: {
-        user: 'djavanmardi', // env var: PGUSER
+        user: 'postgres', // env var: PGUSER
         database: 'user_backendapi', // env var: PGDATABASE
         password: '', // env var: PGPASSWORD
         host: 'localhost', // Server hosting the postgres database

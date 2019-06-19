@@ -1,25 +1,28 @@
 const express = require('express');
+const helmet = require('helmet')
 var path = require('path');
-const log = require('./lib/logger');
 const manageUsers = require ('./lib/manageUsers.js');
+const accessLayer = require ('./lib/accessLayer.js');
+const bodyParser = require('body-parser');
 const config = require ('./config');
 
-const app = express();
-const port = 1367;
-process.env.TZ = 'UTC';
+function user_backendapi(){
+    let app = express();
+    const port = process.env.PORT || 8000;
+    let mainApp = new manageUsers.manageUsers();
 
-app.get('/', async (req, res) =>  {
-    log(`Test index`);
-    res.statusCode = 200;
-    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
-    res.write('index');
-    res.end();
-});
+    //Parse incoming request bodies in a middleware before your handlers
+    app.use(bodyParser.urlencoded({extended: true})); //This parser accepts only UTF-8 encoding of the body a
+    app.use(bodyParser.json());// parse application/json
 
-app.get('/update/:tf', async (req, res) => {
-    res.send(await manageUsers.display('Test'));
-});
+    app.use(helmet());
 
-app.listen(port, async (req,res) => {
-    log(`Started and listening on port ${port}!`);
-});
+    app.post('/signup', mainApp.signup)
+    app.post('/login', mainApp.login);
+    app.get('/users', accessLayer.verifyToken, mainApp.getUsers);
+    app.put('/users', accessLayer.verifyToken, mainApp.updateUser);
+    app.listen(port, async (req,res) => {
+        console.log(`Started and listening on port ${port}!`);
+    });
+}
+user_backendapi();
