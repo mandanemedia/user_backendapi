@@ -29,7 +29,7 @@
     "helmet": "^3.18.0",
     "jsonwebtoken": "^8.3.0",
     "mocha": "^4.1.0",
-    "node-fetch": "^2.2.0",
+    "node-fetch": "^2.6.7",
     "ololog": "^1.1.112",
     "path": "^0.12.7",
     "pg": "7.4.3",
