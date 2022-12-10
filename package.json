@@ -24,7 +24,7 @@
   "dependencies": {
     "assert": "^1.4.1",
     "bcrypt": "^3.0.6",
-    "express": "^4.16.0",
+    "express": "^4.17.3",
     "fs": "0.0.2",
     "helmet": "^3.18.0",
     "jsonwebtoken": "^8.3.0",
